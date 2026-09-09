@@ -1,7 +1,67 @@
-<!DOCTYPE html>
-<html>
-<body>
- <h1>안녕하세요, 제 홈페이지입니다</h1>
- <p>GitHub Pages로 만들었습니다!</p>
-</body>
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="최우열의 개인 홈페이지입니다. 서울대학교 첨단융합학부에서 배우고 탐구합니다." />
+    <title>최우열 | 개인 홈페이지</title>
+    <style>
+      :root { --ink:#14213d; --muted:#5d6b82; --line:#dce4ef; --surface:#fff; --wash:#f4f8fc; --accent:#1463b8; --accent-soft:#e7f1ff; }
+      * { box-sizing:border-box; }
+      html { scroll-behavior:smooth; }
+      body { margin:0; color:var(--ink); background:var(--wash); font-family:"Pretendard","Noto Sans KR","Malgun Gothic",sans-serif; line-height:1.7; }
+      a { color:inherit; }
+      .wrap { width:min(100% - 2.5rem, 960px); margin:0 auto; }
+      header { padding:1.25rem 0; border-bottom:1px solid var(--line); background:rgba(255,255,255,.9); }
+      .nav { display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+      .brand { font-size:1rem; font-weight:800; letter-spacing:-.03em; text-decoration:none; }
+      nav { display:flex; gap:1rem; }
+      nav a { color:var(--muted); font-size:.92rem; font-weight:700; text-decoration:none; }
+      nav a:hover { color:var(--accent); }
+      main { padding:4.5rem 0 3rem; }
+      .hero { display:grid; grid-template-columns:1.4fr .6fr; gap:2rem; align-items:end; padding-bottom:4rem; }
+      .eyebrow { margin:0 0 1rem; color:var(--accent); font-size:.86rem; font-weight:800; letter-spacing:.08em; }
+      h1,h2,p { margin-top:0; }
+      h1 { margin-bottom:1rem; font-size:clamp(2.7rem,8vw,5.3rem); line-height:1.08; letter-spacing:-.075em; }
+      .intro { max-width:36rem; margin-bottom:0; color:var(--muted); font-size:clamp(1.05rem,2.5vw,1.2rem); word-break:keep-all; }
+      .monogram { display:grid; place-items:center; width:min(10rem,33vw); aspect-ratio:1; justify-self:end; border-radius:50%; color:#fff; background:linear-gradient(145deg,#1c76d3,#123e7a); box-shadow:0 1.1rem 2.5rem rgba(20,99,184,.22); font-family:Georgia,serif; font-size:clamp(3.3rem,10vw,5rem); font-weight:700; }
+      .sections { display:grid; gap:1rem; }
+      section { padding:clamp(1.5rem,4vw,2.4rem); border:1px solid var(--line); border-radius:1rem; background:var(--surface); }
+      h2 { margin-bottom:1rem; font-size:1.25rem; letter-spacing:-.04em; }
+      section p { margin-bottom:0; color:var(--muted); word-break:keep-all; }
+      .tags { display:flex; flex-wrap:wrap; gap:.6rem; padding:0; margin:0; list-style:none; }
+      .tags li { padding:.48rem .85rem; border-radius:999px; color:#0d4e96; background:var(--accent-soft); font-size:.94rem; font-weight:700; }
+      .contact { display:flex; align-items:center; justify-content:space-between; gap:1.25rem; }
+      .contact h2 { margin-bottom:.3rem; }
+      .contact p { font-size:.95rem; }
+      .button { display:inline-block; flex:0 0 auto; padding:.7rem 1rem; border-radius:.55rem; color:#fff; background:var(--ink); font-size:.94rem; font-weight:800; text-decoration:none; }
+      .button:hover { background:var(--accent); }
+      footer { padding:1.5rem 0 2.5rem; color:var(--muted); font-size:.84rem; }
+      @media (max-width:560px) { .wrap{width:min(100% - 2rem,960px)} header{padding:1rem 0} nav{gap:.7rem;font-size:.85rem} main{padding-top:3.2rem} .hero{grid-template-columns:1fr;padding-bottom:2.8rem} .monogram{width:5.8rem;justify-self:start;order:-1} .contact{align-items:flex-start;flex-direction:column} }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap nav">
+        <a class="brand" href="#top">최우열</a>
+        <nav aria-label="페이지 탐색"><a href="#about">소개</a><a href="#interests">관심사</a><a href="#contact">연락처</a></nav>
+      </div>
+    </header>
+    <main id="top" class="wrap">
+      <div class="hero">
+        <div>
+          <p class="eyebrow">PERSONAL WEBSITE</p>
+          <h1>최우열</h1>
+          <p class="intro">서울대학교 첨단융합학부에서 새로운 기술과 가능성을 배우고 탐구합니다.</p>
+        </div>
+        <div class="monogram" aria-label="최우열의 이니셜">W</div>
+      </div>
+      <div class="sections">
+        <section id="about"><h2>소개</h2><p>서울대학교 첨단융합학부에서 다양한 분야를 연결하며, 더 나은 문제 해결 방법을 찾아가고 있습니다.</p></section>
+        <section id="interests"><h2>관심사</h2><ul class="tags" aria-label="관심 분야"><li>인공지능</li><li>소프트웨어</li><li>융합기술</li><li>새로운 배움</li></ul></section>
+        <section id="contact" class="contact"><div><h2>연락처</h2><p>작업물과 소식은 GitHub에서 확인할 수 있습니다.</p></div><a class="button" href="https://github.com/woost1" target="_blank" rel="noreferrer">GitHub 방문하기</a></section>
+      </div>
+    </main>
+    <footer class="wrap">© 2026 최우열. All rights reserved.</footer>
+  </body>
 </html>
